@@ -17,9 +17,19 @@
     <%-- Nav --%>
     <div class="navBar">
         <ul class="navBar__ul">
-            <li class="navBar__ul">Agregar Sucursales</li>
-            <li class="navBar__ul">Listado de Sucursales</li>
-            <li class="navBar__ul">Eliminar Sucursal</li>
+            <li class="navBar__ul__li">Sucursales</li>
+            
+            <li class="navBar__ul__li">
+                <asp:HyperLink ID="linkListSuc" runat="server" NavigateUrl="~/ListadoSucursales.aspx" CssClass="navBar__link">
+                    Listado de sucursales
+                </asp:HyperLink>
+            </li>
+
+            <li class="navBar__ul__li">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="" CssClass="navBar__link">
+                    Eliminar Sucursal
+                </asp:HyperLink>
+            </li>
         </ul>
     </div>
 

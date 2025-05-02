@@ -18,7 +18,7 @@ body {
 
 /* Navbar */
 .navBar {
-    background-color: #444; /* gris oscuro */
+    background-color: #444;
     width: 100%;
     padding: 1rem 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -29,16 +29,23 @@ body {
     justify-content: center;
     list-style: none;
     gap: 2rem;
+}
+
+.navBar__ul__li{
+    font-weight: bold;
+    list-style: none;
+}
+
+/* Estilo para los links de navegación */
+.navBar__link {
     color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
     font-weight: bold;
 }
 
-.navBar__ul li {
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.navBar__ul li:hover {
+/* Hover suave */
+.navBar__link:hover {
     color: #ccc;
 }
 
