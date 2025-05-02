@@ -35,5 +35,15 @@ namespace WebApp_Sql_tp5
         }
       }
     }
+
+    public int executeNonQuery(string query)
+    {
+      using (SqlConnection connection = new SqlConnection(_connectingString))
+      using (SqlCommand command = new SqlCommand(query, connection))
+      {
+        connection.Open();
+        return command.ExecuteNonQuery();
+      }
+    }
   }
 }

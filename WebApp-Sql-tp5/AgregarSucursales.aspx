@@ -54,7 +54,9 @@
             <asp:RequiredFieldValidator ID="requiredAddressSuc" runat="server" ControlToValidate="txtAddressSuc" CssClass="validaciones">Este campo es requerido</asp:RequiredFieldValidator>
         </div>
         <%-- Boton Enviar --%>
-        <asp:Button runat="server" ID="btnSend" Text="Enviar"/>
+        <asp:Button runat="server" ID="btnSend" Text="Enviar" OnClick="btnSend_Click"/>
+        <hr />
+        <asp:Label ID="lblShow" runat="server"></asp:Label>
     </form>
 </body>
 </html>
