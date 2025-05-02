@@ -33,6 +33,15 @@ namespace WebApp_Sql_tp5
     protected global::System.Web.UI.WebControls.TextBox txtNameSuc;
 
     /// <summary>
+    /// requiredNameSuc control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredNameSuc;
+
+    /// <summary>
     /// txtDescriptionSuc control.
     /// </summary>
     /// <remarks>
@@ -40,6 +49,15 @@ namespace WebApp_Sql_tp5
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtDescriptionSuc;
+
+    /// <summary>
+    /// requiredDescriptionSuc control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredDescriptionSuc;
 
     /// <summary>
     /// ddlProvinciesSuc control.
@@ -51,6 +69,15 @@ namespace WebApp_Sql_tp5
     protected global::System.Web.UI.WebControls.DropDownList ddlProvinciesSuc;
 
     /// <summary>
+    /// requiredProvinciesSuc control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredProvinciesSuc;
+
+    /// <summary>
     /// txtAddressSuc control.
     /// </summary>
     /// <remarks>
@@ -58,6 +85,15 @@ namespace WebApp_Sql_tp5
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.TextBox txtAddressSuc;
+
+    /// <summary>
+    /// requiredAddressSuc control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredAddressSuc;
 
     /// <summary>
     /// btnSend control.

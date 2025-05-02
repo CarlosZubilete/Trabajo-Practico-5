@@ -28,12 +28,14 @@
         <%-- Nombre Sucursal --%>
         <div>
             <span>Nombre Sucursal:</span>
-            <asp:TextBox runat="server" ID="txtNameSuc"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtNameSuc" MaxLength="100"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="requiredNameSuc" runat="server" ControlToValidate="txtNameSuc" CssClass="validaciones">Este campo es requerido</asp:RequiredFieldValidator>
         </div>
         <%-- Descripcion Sucursal--%>
         <div>
             <span>Descripción: </span>
-            <asp:TextBox runat="server" ID="txtDescriptionSuc"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtDescriptionSuc" MaxLength="100"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="requiredDescriptionSuc" runat="server" ControlToValidate="txtDescriptionSuc" CssClass="validaciones">Este campo es requerido</asp:RequiredFieldValidator>
         </div>
         <%-- Provincias Sucursal --%>
         <div>
@@ -42,11 +44,14 @@
                 <asp:ListItem Value="0" Enabled="True">-- Seleccionar -- </asp:ListItem>
             </asp:DropDownList>
             </span>
+            
+            <asp:RequiredFieldValidator ID="requiredProvinciesSuc" runat="server" ControlToValidate="ddlProvinciesSuc" CssClass="validaciones" InitialValue="0">Debe seleccionar una Provincia</asp:RequiredFieldValidator>
         </div>
         <%-- Direccion Sucursal --%>
         <div>
             <span>Dirección:</span>
-            <asp:TextBox runat="server" ID="txtAddressSuc"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtAddressSuc" MaxLength="100"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="requiredAddressSuc" runat="server" ControlToValidate="txtAddressSuc" CssClass="validaciones">Este campo es requerido</asp:RequiredFieldValidator>
         </div>
         <%-- Boton Enviar --%>
         <asp:Button runat="server" ID="btnSend" Text="Enviar"/>

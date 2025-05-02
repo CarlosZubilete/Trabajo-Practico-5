@@ -87,6 +87,15 @@ input[type="text"]:focus, select:focus {
     border-color: #333;
 }
 
+/*Validaciones*/
+.validaciones{
+    font-size:small; 
+    color: #ff0000;
+    letter-spacing: .1rem;
+    padding: 0 .5rem;
+    user-select:none;
+}
+
 /* Botón */
 input[type="submit"], .aspNet-Button {
     padding: 0.7rem;
