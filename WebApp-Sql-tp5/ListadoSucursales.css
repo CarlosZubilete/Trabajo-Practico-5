@@ -35,11 +35,11 @@ body {
     font-weight: bold;
     list-style: none;
 }
-    /*Hover suave*/
-    .navBar__ul__li:hover {
-        color: #ccc;
-        cursor: pointer;
-    }
+/*Hover suave*/
+.navBar__ul__li:hover {
+    color: #ccc;
+    cursor: pointer;
+}
 
 .navBar__link.active {
     color: aqua;
@@ -71,7 +71,7 @@ body {
     padding: 1rem;
     margin: 2rem auto;
     border-radius: 12px;
-    width: 100%;
+    width: 25%;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -102,6 +102,17 @@ body {
     border-color: #333;
 }
 
+/*Validaciones*/
+.validaciones {
+    margin-top: -.5rem;
+    font-size: .6rem;
+    color: #ff0000;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    padding: 0 .1rem;
+    user-select: none;
+}
+
 .busqueda .aspNet-Button {
     background-color: #888;
     color: white;
@@ -115,8 +126,7 @@ body {
 }
 
 /* GridView */
-/*
-#gridFiltros {
+.gridFiltros {
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
@@ -124,7 +134,7 @@ body {
     animation: fadeIn 0.6s ease-in;
 }
 
-#gridFiltros th {
+.gridFiltros th {
     background-color: #ccc;
     color: #333;
     padding: 0.7rem;
@@ -132,16 +142,16 @@ body {
     text-align: left;
 }
 
-#gridFiltros td {
+.gridFiltros td {
     background-color: #f9f9f9;
     padding: 0.6rem;
     border: 1px solid #ddd;
 }
 
-#gridFiltros tr:hover {
+.gridFiltros tr:hover {
     background-color: #eee;
 }
-*/
+
 
 
 /* Animación suave */

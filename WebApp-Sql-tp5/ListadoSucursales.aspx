@@ -1,4 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListadoSucursales.aspx.cs" Inherits="WebApp_Sql_tp5.ListadoSucursales" %>
+﻿<%@ Page 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="ListadoSucursales.aspx.cs" 
+    UnobtrusiveValidationMode="None"
+    Inherits="WebApp_Sql_tp5.ListadoSucursales" %>
 
 <!DOCTYPE html>
 
@@ -35,15 +40,27 @@
     <form id="form1" runat="server">
         <%-- Busqueda de Sucursales --%>
         <div class="busqueda">
-            <span class="busqueda__span">Ingrese ID sucursal: 
+            
+            <span class="busqueda__span" id="rageFiltro">Ingrese ID sucursal: 
             <asp:TextBox runat="server" ID="txtFind"></asp:TextBox>
-            <asp:Button runat="server" ID="btnFilter" text="Filtrar"/>
+            <%-- VALIDADOR REQUIRED --%>
+            <asp:RequiredFieldValidator runat="server" 
+                ControlToValidate="txtFind" 
+                ID="requiredTxtFind" CssClass="validaciones" Text="Ingrese un ID"></asp:RequiredFieldValidator>
+            <%-- VALIDADOR REGEX  --%>
+            <%--<asp:RegularExpressionValidator runat="server" ID="regexNumerosEnteros" 
+                ControlToValidate="txtFind" Text="Solo N° Enteros" CssClass="validaciones" 
+                ValidationExpression="^[1-9][0-9]*$"></asp:RegularExpressionValidator>--%>
+            <%-- RAGE VALIDATOR --%>
+            <asp:RangeValidator runat="server" ID="rageFiltros" Text="Número Invalido" ControlToValidate="txtFind" MaximumValue="15" MinimumValue="1" Type="Integer" CssClass="validaciones">
+            </asp:RangeValidator>
+            <asp:Button runat="server" ID="btnFilter" text="Filtrar" OnClick="btnFilter_Click"/>
             <asp:Button runat="server" ID="btnShowAll" text="Mostrar Todos"/>
             </span>
         </div>
         <%-- Grid con los resultados: --%>
         <div>
-            <asp:GridView runat="server" ID="gridFiltros"></asp:GridView>
+            <asp:GridView runat="server" ID="gridFiltros" CssClass="gridFiltros"></asp:GridView>
         </div>
     </form>
 </body>

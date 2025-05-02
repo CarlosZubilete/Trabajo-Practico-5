@@ -105,10 +105,10 @@ input[type="text"]:focus, select:focus {
 
 /*Validaciones*/
 .validaciones{
-    font-size:small; 
+    font-size: smaller; 
     color: #ff0000;
-    letter-spacing: .1rem;
-    padding: 0 .5rem;
+    letter-spacing: .2rem;
+    padding: 0 .1rem;
     user-select:none;
 }
 

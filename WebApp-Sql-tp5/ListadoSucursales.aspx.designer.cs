@@ -51,6 +51,24 @@ namespace WebApp_Sql_tp5
     protected global::System.Web.UI.WebControls.TextBox txtFind;
 
     /// <summary>
+    /// requiredTxtFind control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTxtFind;
+
+    /// <summary>
+    /// rageFiltros control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.RangeValidator rageFiltros;
+
+    /// <summary>
     /// btnFilter control.
     /// </summary>
     /// <remarks>
