@@ -70,6 +70,7 @@
     <Content Include="AgregarSucursales.aspx" />
     <Content Include="AgregarSucursales.css" />
     <Content Include="ListadoSucursales.aspx" />
+    <Content Include="ListadoSucursales.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

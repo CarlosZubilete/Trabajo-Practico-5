@@ -15,13 +15,22 @@ namespace WebApp_Sql_tp5
   {
 
     /// <summary>
-    /// linkSucursales control.
+    /// HyperLink2 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.HyperLink linkSucursales;
+    protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+
+    /// <summary>
+    /// linkListSuc control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HyperLink linkListSuc;
 
     /// <summary>
     /// form1 control.
@@ -31,5 +40,41 @@ namespace WebApp_Sql_tp5
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+
+    /// <summary>
+    /// txtFind control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox txtFind;
+
+    /// <summary>
+    /// btnFilter control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnFilter;
+
+    /// <summary>
+    /// btnShowAll control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Button btnShowAll;
+
+    /// <summary>
+    /// gridFiltros control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.GridView gridFiltros;
   }
 }
