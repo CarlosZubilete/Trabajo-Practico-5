@@ -87,6 +87,15 @@ namespace WebApp_Sql_tp5
     protected global::System.Web.UI.WebControls.Button btnShowAll;
 
     /// <summary>
+    /// lblShow control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label lblShow;
+
+    /// <summary>
     /// gridFiltros control.
     /// </summary>
     /// <remarks>

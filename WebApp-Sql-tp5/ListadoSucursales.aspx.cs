@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 // 
 using System.Data.SqlClient;
 
+// !TODO : Agregar una clase:
 namespace WebApp_Sql_tp5
 {
   public partial class ListadoSucursales : System.Web.UI.Page
@@ -17,14 +18,6 @@ namespace WebApp_Sql_tp5
     {
       if (!IsPostBack)
       {
-        //SqlConnection connection = new SqlConnection(connectiongString);
-        //connection.Open();
-
-        //SqlCommand command = new SqlCommand(query,connection);
-        //SqlDataReader dataReader = command.ExecuteReader();
-        //gridFiltros.DataSource = dataReader;
-        //gridFiltros.DataBind();
-        //connection.Close();
         this.load_GridView(gridFiltros, queryAll);
       }
     }
@@ -44,11 +37,30 @@ namespace WebApp_Sql_tp5
     protected void btnFilter_Click(object sender, EventArgs e)
     {
       string queryFiltro = queryAll;  
-      // WHERE S.Id_Sucursal = 10
-      // string filtro = " WHERE S.Id_Sucursal = " + Convert.ToInt32(txtFind.Text);
-
       queryFiltro += " WHERE S.Id_Sucursal = " + Convert.ToInt32(txtFind.Text);
-      this.load_GridView(gridFiltros, queryFiltro);
+
+      try
+      {
+        this.load_GridView(gridFiltros, queryFiltro);
+        txtFind.Text = String.Empty;
+      }
+      catch
+      {
+        lblShow.Text = "Ocurrio un error";
+      }
+    }
+
+    protected void btnShowAll_Click(object sender, EventArgs e)
+    {
+      try
+      {
+        this.load_GridView(gridFiltros, queryAll);
+        txtFind.Text = String.Empty;
+      }
+      catch
+      {
+        lblShow.Text = "Ocurrio un error";
+      }
     }
   }
 }

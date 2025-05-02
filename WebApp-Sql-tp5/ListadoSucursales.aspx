@@ -42,21 +42,21 @@
         <div class="busqueda">
             
             <span class="busqueda__span" id="rageFiltro">Ingrese ID sucursal: 
-            <asp:TextBox runat="server" ID="txtFind"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtFind" ValidationGroup="Filter"></asp:TextBox>
             <%-- VALIDADOR REQUIRED --%>
             <asp:RequiredFieldValidator runat="server" 
                 ControlToValidate="txtFind" 
-                ID="requiredTxtFind" CssClass="validaciones" Text="Ingrese un ID"></asp:RequiredFieldValidator>
+                ID="requiredTxtFind" CssClass="validaciones" Text="Ingrese un ID" ValidationGroup="Filter"></asp:RequiredFieldValidator>
             <%-- VALIDADOR REGEX  --%>
             <%--<asp:RegularExpressionValidator runat="server" ID="regexNumerosEnteros" 
                 ControlToValidate="txtFind" Text="Solo N° Enteros" CssClass="validaciones" 
                 ValidationExpression="^[1-9][0-9]*$"></asp:RegularExpressionValidator>--%>
             <%-- RAGE VALIDATOR --%>
-            <asp:RangeValidator runat="server" ID="rageFiltros" Text="Número Invalido" ControlToValidate="txtFind" MaximumValue="15" MinimumValue="1" Type="Integer" CssClass="validaciones">
-            </asp:RangeValidator>
-            <asp:Button runat="server" ID="btnFilter" text="Filtrar" OnClick="btnFilter_Click"/>
-            <asp:Button runat="server" ID="btnShowAll" text="Mostrar Todos"/>
+            <asp:RangeValidator runat="server" ID="rageFiltros" Text="Número Invalido" ControlToValidate="txtFind" MaximumValue="15" MinimumValue="1" Type="Integer" CssClass="validaciones" ValidationGroup="Filter"></asp:RangeValidator>
+            <asp:Button runat="server" ID="btnFilter" text="Filtrar" OnClick="btnFilter_Click" ValidationGroup="Filter"/>
+            <asp:Button runat="server" ID="btnShowAll" text="Mostrar Todos" OnClick="btnShowAll_Click"/>
             </span>
+            <asp:Label runat="server" ID="lblShow"></asp:Label>
         </div>
         <%-- Grid con los resultados: --%>
         <div>
