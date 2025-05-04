@@ -15,7 +15,7 @@ namespace WebApp_Sql_tp5
 
     private string queryAll = "SELECT S.Id_Sucursal, S.NombreSucursal, S.DescripcionSucursal AS 'Descripcion', P.DescripcionProvincia AS 'Provincias',S.DireccionSucursal AS 'Direccion' FROM Sucursal S JOIN Provincia P ON S.Id_ProvinciaSucursal = P.Id_Provincia";
 
-    private string queryCount = "SELECT count(Id_Sucursal) as 'Maximo' From Sucursal";
+    private string queryCount = "SELECT count(Id_Sucursal) From Sucursal";
     protected void Page_Load(object sender, EventArgs e)
     {
       if (!IsPostBack)

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 
 namespace WebApp_Sql_tp5
 {
@@ -30,9 +29,21 @@ namespace WebApp_Sql_tp5
 
     protected void btnSend_Click(object sender, EventArgs e)
     {
-      lblShow.Text = "Eliminado Exitoso";
-      // !TODO MANDAR LA QUUERY A ELIMINAR
-      // !TODO , Cada vez que agregamos un registro , aumenta el rage de nuestra validación!
+      // DELETE FROM Sucursal WHERE Id_Sucursal = 
+      string query = "DELETE FROM Sucursal WHERE Id_Sucursal =" + Convert.ToInt32(ddlSucursales.SelectedValue);
+
+      try
+      {
+        if (service.executeNonQuery(query) == 1)
+        {
+          lblShow.Text = "Eliminado completado";
+          ddlSucursales.SelectedIndex = 0;
+        }
+      }
+      catch
+      {
+        lblShow.Text = "Ocurrió un error"; 
+      }
     }
   }
 }
