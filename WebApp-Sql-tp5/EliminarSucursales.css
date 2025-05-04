@@ -36,11 +36,11 @@ body {
   font-weight: bold;
   list-style: none;
 }
-  /*Hover suave*/
-  .navBar__ul__li:hover {
-    color: #ccc;
-    cursor: pointer;
-  }
+/*Hover suave*/
+.navBar__ul__li:hover {
+  color: #ccc;
+  cursor: pointer;
+}
 
 .navBar__link.active {
   color: aqua;
@@ -54,13 +54,96 @@ body {
   font-weight: bold;
 }
 
-  /* Hover suave */
-  .navBar__link:hover {
-    color: #ccc;
-  }
+/* Hover suave */
+.navBar__link:hover {
+  color: #ccc;
+}
 /* Título */
 .title {
   margin: 2rem 0 1rem 0;
   font-size: 1.8rem;
   color: #555;
+}
+
+/*FORMULARIO*/
+.eliminar-formulario {
+  width: 30vw;
+  background-color: #ffffff;
+  border: 2px solid #999;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 2rem auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in;
+}
+
+.eliminar-formulario__label {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.eliminar-formulario__dropdown {
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align:start;
+  border: 1px solid #777;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.eliminar-formulario__dropdown:focus {
+  border-color: #333;
+}
+
+.aspNet-Button {
+  font-size: 0.95rem;
+  letter-spacing: .1rem;
+  padding: 0.5rem 1rem;
+  background-color: #888;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  min-width: 110px;
+}
+
+.aspNet-Button:hover {
+  background-color: #666;
+}
+
+/*Validaciones*/
+.validaciones {
+  margin-top: -.8rem;
+  font-size: .6rem;
+  color: #ff0000;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  padding: 0 .1rem;
+  user-select: none;
+}
+
+#lblShow {
+  margin-left: 9rem;
+  font-size: 1.15rem;
+  color: #ff0000;
+  margin-bottom: 0.2rem;
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

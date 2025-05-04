@@ -38,9 +38,23 @@
     </div>
     <%-- TItulo: --%>
     <h1 class="title">Listado de sucursales</h1>
+    <%-- FORMULARIO --%>
     <form id="form1" runat="server">
-        <div>
+        
+        <div class="eliminar-formulario">
+            <label class="eliminar-formulario__label">ID Sucursal:</label>
+            <asp:DropDownList runat="server" ID="ddlSucursales" CssClass="eliminar-formulario__dropdown" OnSelectedIndexChanged="ddlSucursales_SelectedIndexChanged" AutoPostBack="True">
+                <asp:ListItem Value="0" Enabled="True">-- Seleccionar --</asp:ListItem>
+            </asp:DropDownList>
+            <asp:RequiredFieldValidator 
+                runat="server" ID="requiredSelectSuc"
+                CssClass="validaciones" Text="Seleccione una Surcursal" ControlToValidate="ddlSucursales" InitialValue="0"></asp:RequiredFieldValidator>
+            <asp:Button runat="server" Text="Eliminar" ID="btnSend" CssClass="aspNet-Button" OnClick="btnSend_Click" />
         </div>
+        <span class="contenedor__lblShow">
+         <asp:Label runat="server" ID="lblShow"></asp:Label>
+        </span>
+        <hr />
     </form>
 </body>
 </html>

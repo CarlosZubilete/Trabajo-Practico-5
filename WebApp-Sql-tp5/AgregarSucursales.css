@@ -107,7 +107,7 @@ input[type="text"]:focus, select:focus {
 .validaciones{
     font-size: smaller; 
     color: #ff0000;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     padding: 0 .1rem;
     user-select:none;
 }
