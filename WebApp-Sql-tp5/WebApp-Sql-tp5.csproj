@@ -89,6 +89,7 @@
       <DependentUpon>ListadoSucursales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceListSuc.cs" />
     <Compile Include="ServiceSuc.cs" />
   </ItemGroup>
   <ItemGroup>

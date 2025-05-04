@@ -37,31 +37,30 @@
     </div>
     <%-- TItulo: --%>
     <h1 class="title">Listado de sucursales</h1>
+
     <form id="form1" runat="server">
         <%-- Busqueda de Sucursales --%>
-        <div class="busqueda">
-            
+       <div class="busqueda">   
             <span class="busqueda__span" id="rageFiltro">Ingrese ID sucursal: 
             <asp:TextBox runat="server" ID="txtFind" ValidationGroup="Filter"></asp:TextBox>
-            <%-- VALIDADOR REQUIRED --%>
+          
             <asp:RequiredFieldValidator runat="server" 
                 ControlToValidate="txtFind" 
                 ID="requiredTxtFind" CssClass="validaciones" Text="Ingrese un ID" ValidationGroup="Filter"></asp:RequiredFieldValidator>
-            <%-- VALIDADOR REGEX  --%>
-            <%--<asp:RegularExpressionValidator runat="server" ID="regexNumerosEnteros" 
-                ControlToValidate="txtFind" Text="Solo N° Enteros" CssClass="validaciones" 
-                ValidationExpression="^[1-9][0-9]*$"></asp:RegularExpressionValidator>--%>
-            <%-- RAGE VALIDATOR --%>
+         
             <asp:RangeValidator runat="server" ID="rageFiltros" Text="Número Invalido" ControlToValidate="txtFind" MaximumValue="15" MinimumValue="1" Type="Integer" CssClass="validaciones" ValidationGroup="Filter"></asp:RangeValidator>
-            <asp:Button runat="server" ID="btnFilter" text="Filtrar" OnClick="btnFilter_Click" ValidationGroup="Filter"/>
-            <asp:Button runat="server" ID="btnShowAll" text="Mostrar Todos" OnClick="btnShowAll_Click"/>
+            <asp:Button runat="server" ID="btnFilter" text="Filtrar" OnClick="btnFilter_Click" ValidationGroup="Filter" CssClass="aspNet-Button"/>
+            <asp:Button runat="server" ID="btnShowAll" text="Mostrar Todos" OnClick="btnShowAll_Click" CssClass="aspNet-Button"/>
             </span>
             <asp:Label runat="server" ID="lblShow"></asp:Label>
         </div>
-        <%-- Grid con los resultados: --%>
-        <div>
+
+       <%--Grid con los resultados: --%>
+        <div class="gridFiltros">
             <asp:GridView runat="server" ID="gridFiltros" CssClass="gridFiltros"></asp:GridView>
         </div>
     </form>
 </body>
 </html>
+
+

@@ -4,36 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-// 
-using System.Data.SqlClient;
 
-// !TODO : Agregar una clase:
+
+
 namespace WebApp_Sql_tp5
 {
   public partial class ListadoSucursales : System.Web.UI.Page
   {
-    private const string connectiongString = @"Data Source=DESKTOP-LFTFVP5\SQLEXPRESS;Initial Catalog=BDSucursales;Integrated Security=True";
+    ServiceListSuc service = new ServiceListSuc(); 
+
     private string queryAll = "SELECT S.Id_Sucursal, S.NombreSucursal, S.DescripcionSucursal AS 'Descripcion', P.DescripcionProvincia AS 'Provincias',S.DireccionSucursal AS 'Direccion' FROM Sucursal S JOIN Provincia P ON S.Id_ProvinciaSucursal = P.Id_Provincia"; 
     protected void Page_Load(object sender, EventArgs e)
     {
       if (!IsPostBack)
       {
-        this.load_GridView(gridFiltros, queryAll);
+        service.load_GridView(gridFiltros, queryAll);
       }
     }
-    public void load_GridView(GridView gv, string query)
-    {
-      using(SqlConnection connection = new SqlConnection(connectiongString))
-      {
-        connection.Open();
-        using (SqlCommand command = new SqlCommand(query, connection))
-        {
-          SqlDataReader dataReader = command.ExecuteReader();
-          gridFiltros.DataSource = dataReader;
-          gridFiltros.DataBind();
-        }
-      }
-    }
+
     protected void btnFilter_Click(object sender, EventArgs e)
     {
       string queryFiltro = queryAll;  
@@ -41,7 +29,7 @@ namespace WebApp_Sql_tp5
 
       try
       {
-        this.load_GridView(gridFiltros, queryFiltro);
+        service.load_GridView(gridFiltros, queryFiltro);
         txtFind.Text = String.Empty;
       }
       catch
@@ -49,12 +37,11 @@ namespace WebApp_Sql_tp5
         lblShow.Text = "Ocurrio un error";
       }
     }
-
     protected void btnShowAll_Click(object sender, EventArgs e)
     {
       try
       {
-        this.load_GridView(gridFiltros, queryAll);
+        service.load_GridView(gridFiltros, queryAll);
         txtFind.Text = String.Empty;
       }
       catch
