@@ -28,11 +28,10 @@
                     Listado de sucursales
                 </asp:HyperLink>
             </li>
-
-            <li class="navBar__ul__li">
-                    Eliminar Sucursal
-                <%--<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="" CssClass="navBar__link">
-                </asp:HyperLink>--%>
+            <li class="navBar__ul__li">          
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ElminarSucursales.aspx" CssClass="navBar__link">
+                     Eliminar Sucursal
+                </asp:HyperLink>
             </li>
         </ul>
     </div>

@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="AgregarSucursales.aspx" />
     <Content Include="AgregarSucursales.css" />
+    <Content Include="EliminarSucursales.css" />
+    <Content Include="ElminarSucursales.aspx" />
     <Content Include="ListadoSucursales.aspx" />
     <Content Include="ListadoSucursales.css" />
     <Content Include="Web.config" />
@@ -80,6 +82,13 @@
     </Compile>
     <Compile Include="AgregarSucursales.aspx.designer.cs">
       <DependentUpon>AgregarSucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElminarSucursales.aspx.cs">
+      <DependentUpon>ElminarSucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElminarSucursales.aspx.designer.cs">
+      <DependentUpon>ElminarSucursales.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListadoSucursales.aspx.cs">
       <DependentUpon>ListadoSucursales.aspx</DependentUpon>
