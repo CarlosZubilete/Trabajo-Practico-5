@@ -50,8 +50,12 @@
             <%-- Range Validator --%>
             <asp:RangeValidator runat="server" 
                 ID="rageFiltros" Text="ID Invalido" 
-                ControlToValidate="txtFind" MaximumValue="15" MinimumValue="1" Type="Integer" CssClass="validaciones" 
-                ValidationGroup="Filter"></asp:RangeValidator>
+                ControlToValidate="txtFind" 
+                Type="Integer" CssClass="validaciones" 
+                ValidationGroup="Filter"
+                MinimumValue="1" >
+                <%--MaximumValue="15" , Setemos los valores desde appx.cs--%> 
+            </asp:RangeValidator>
             <%-- Boton Filtrar --%>
             <asp:Button runat="server" ID="btnFilter" text="Filtrar" OnClick="btnFilter_Click" ValidationGroup="Filter" CssClass="aspNet-Button"/>
             <%-- Boton Mostrar Todos --%>

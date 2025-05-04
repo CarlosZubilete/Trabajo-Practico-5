@@ -13,12 +13,15 @@ namespace WebApp_Sql_tp5
   {
     ServiceListSuc service = new ServiceListSuc(); 
 
-    private string queryAll = "SELECT S.Id_Sucursal, S.NombreSucursal, S.DescripcionSucursal AS 'Descripcion', P.DescripcionProvincia AS 'Provincias',S.DireccionSucursal AS 'Direccion' FROM Sucursal S JOIN Provincia P ON S.Id_ProvinciaSucursal = P.Id_Provincia"; 
+    private string queryAll = "SELECT S.Id_Sucursal, S.NombreSucursal, S.DescripcionSucursal AS 'Descripcion', P.DescripcionProvincia AS 'Provincias',S.DireccionSucursal AS 'Direccion' FROM Sucursal S JOIN Provincia P ON S.Id_ProvinciaSucursal = P.Id_Provincia";
+
+    private string queryCount = "SELECT count(Id_Sucursal) as 'Maximo' From Sucursal";
     protected void Page_Load(object sender, EventArgs e)
     {
       if (!IsPostBack)
       {
         service.load_GridView(gridFiltros, queryAll);
+        rageFiltros.MaximumValue = (service.getCountField(queryCount)).ToString();
       }
     }
 

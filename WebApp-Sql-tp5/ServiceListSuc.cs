@@ -24,5 +24,23 @@ namespace WebApp_Sql_tp5
         }
       }
     }
+    // Funcions que nos retornará la cantidad de columnas, 
+    public int getCountField(string query)
+    {
+      using (SqlConnection connection = new SqlConnection(_connectiongString))
+      {
+        connection.Open();
+        using (SqlCommand command = new SqlCommand(query, connection))
+        {
+          SqlDataReader dataReader = command.ExecuteReader();
+          if (dataReader.Read()) // Solo avanzamos a la primera y una fila 
+          {
+            return dataReader.GetInt32(0); // Dame la columna en la posición 0 (primera columna) y convertímela a int.
+            // reader["Maximo"] // Maximo es el alias que le pusimos en la consulta. 
+          }
+        }
+      }
+      return 0; // Si no retorna nada
+    }
   }
 }
